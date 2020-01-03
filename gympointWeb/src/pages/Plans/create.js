@@ -38,11 +38,12 @@ export default function AddPlan() {
 
   async function handleSubmit({ title, price, duration }) {
     try {
-      await api.post('/plans', {
+      const response = await api.post('/plans', {
         title,
         price,
         duration,
       });
+      console.tron.log(response);
       toast.success('Plano cadastrado com sucesso');
       history.push('/plans');
     } catch (error) {
