@@ -7,8 +7,8 @@ module.exports = {
       [
         {
           name: 'Administrador',
-          email: 'admin@gympoint.com',
-          password_hash: bcrypt.hashSync('123456', 8),
+          email: process.env.ADMIN_EMAIL,
+          password_hash: bcrypt.hashSync(process.env.ADMIN_PASS, 8),
           created_at: new Date(),
           updated_at: new Date(),
         },
@@ -18,6 +18,6 @@ module.exports = {
   },
 
   down: queryInterface => {
-    return queryInterface.dropTable('users');
+    return queryInterface.bulkDelete('users', null, {});
   },
 };
