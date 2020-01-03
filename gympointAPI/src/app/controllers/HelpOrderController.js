@@ -70,14 +70,14 @@ class HelpOrderController {
     }
     const student = await Student.findByPk(helpOrder.student_id);
 
-    await Queue.add(AnswerHelpMail.key, {
-      student,
-      helpOrder,
-    });
-
     const order = await helpOrder.update({
       answer: req.body.answer,
       answer_at: new Date(),
+    });
+
+    await Queue.add(AnswerHelpMail.key, {
+      student,
+      helpOrder,
     });
 
     return res.json(order);

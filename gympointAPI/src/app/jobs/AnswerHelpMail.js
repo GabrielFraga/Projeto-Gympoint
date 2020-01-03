@@ -5,9 +5,8 @@ class AnswerHelpMail {
     return 'AnswerHelpMail';
   }
 
-  async handle(data) {
+  async handle({ data }) {
     const { student, helpOrder } = data;
-    // console.log(`NOME DO ESTUDANTE${student.name}`);
     await Mail.sendMail({
       to: `${student.name} <${student.mail}>`,
       subject: 'Resposta ao seu pedido de auxílio',

@@ -7,7 +7,7 @@ class RegistrationMail {
     return 'RegistrationMail';
   }
 
-  async handle(data) {
+  async handle({ data }) {
     const { student, plan, price, startDate, end_date } = data;
     await Mail.sendMail({
       to: `${student.name} <${student.email}> `,
