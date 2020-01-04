@@ -1,20 +1,21 @@
-# Projeto-Gympoint
+# Projeto Gympoint
 
 Projeto de conclusão do curso GoStack da RockeatSeat. 
 
-O Gympoint é um sistema de gerenciamento de de academia. Possui uma API que mantém os dados, um módulo web para administração e um aplicativo para acesso dos alunos da academia.
+O Gympoint é um sistema de gerenciamento de academia. Possui uma API que mantém os dados, um módulo web para administração e cadastro de planos, alunos e pedidos de ajuda e um aplicativo para acesso dos alunos da academia onde podem ser feitos os check-ins e realização de pedidos de ajuda.
 
 
 Para fins de compatibilidade e assertividade do guia abaixo, recomendo utilizar o yarn ao invés do npm. https://yarnpkg.com/en/docs/install
 
 
-## API Gympoint
+##API Gympoint
 
 Após baixar o projeto, deve ser criado um arquivo chamado ".env" na pasta gympointAPI contendo as variáveis de ambiente necessárias pra funcionamento do projeto. O conteúdo do arquivo deve ser conforme exemplificação abaixo. Utilize o arquivo ".env.example" como molde. 
 
 ### Variáveis de Ambiente da API
 
-#Base url - Porta em que API usará em sua máquina. 
+```
+# Base url - Porta em que API usará em sua máquina. 
 APP_URL=http://localhost:3333
 APP_DEV_PORT=3333
 NODE_ENV=development 
@@ -45,87 +46,93 @@ MAIL_PASS=dp7h3f3b10eed8
 
 #Sentry - Serviço online de geração de logs de erro. Acesse https://sentry.io/ e faça seu cadastro para obter a url necessária.
 DSN=
-
+```
 
 #### Iniciando o projeto
 
-Para rodar a API, instale as dependências do projeto, executando:
+Para rodar a API, instale as dependências do projeto, executando o comando:
 
-yarn
+``` yarn ```
 
-Inicie previamente seu banco local e o Redis. 
+Inicie seu banco local e o Redis. 
 
-Popule seu banco rodando as migrations e os seeds. Para isso, na raiz da pasta gympointAPI abra seu terminal e execute os comandos:
+Popule o banco rodando as migrations e os seeds. Para isso, na raiz da pasta gympointAPI abra seu terminal e execute os comandos:
 
+```
 yarn sequelize db:migrate
 
 yarn sequelize db:seed:all
-
+```
 
 Para iniciar a API. Execute:
- 
+
+```
 yarn dev
+```
 
 Inicie a fila de envio de e-mails, abra uma nova aba de seu terminal na mesma pasta (gympointAPI) e digite:
 
+```
 yarn queue 
-
+```
 
 ## Módulo Web.
 
-O módulo web é o acesso de administrador. É preciso somente definir a url da API Gympoint definida no passo anterior. 
+O módulo web é o acesso de administrador. A única variável de ambiente deste módulo é o caminho até a API, iniciada no passo anterior. 
 
 
 ### Variáveis de ambiente do módulo Web
 
 Na pasta gympointWeb, crie um arquivo .env e preencha conforme exemplo do arquivo .env.example. 
 
+```
 #API - Porta em que a API está rodando.
 REACT_APP_BASE_URL=http://localhost:3333
-
+```
 
 ### Iniciando o projeto
 
 Para iniciar o módulo web, abra o terminal na pasta raíz (gympointWeb), instale as dependências e dê início a aplicação.
-
+```
 yarn 
 
 yarn start
-
-Para acessar o sistema, utilize o acesso de administrador definido nas variáveis de ambiente da API.
+```
+Para acessar o sistema, utilize o login de administrador definido nas variáveis de ambiente da API.
 
 
 ## Aplicativo Gympoint
 
-Como durante o desenvolvimento, não foi possível fazer teste no IOS, só posso garantir o funcionamento correto deste aplicativo no android por ora. Portanto, considero que este app não é compatível com iPhone no momento. 
+Durante o desenvolvimento dessa aplicação utilizei apenas dispositivos Android, portanto, não posso garantir que o aplicativo funciona corretamente em dispositivos IOS. O guia abaixo é apenas para Android
 
 Para rodar o app, é preciso ter o ambiente o Android instalado em sua máquina. Acesse o tutorial a seguir se necessário. https://docs.rocketseat.dev/ambiente-react-native/introducao
 
 
 ### Variáveis de ambiente do app
 
-Defina as variáveis de ambiente criando um novo arquivo .env. Este, conforme exemplo abaixo, deve possui o ip local, para funcionamento do Reactotron e o endereço da API Gympoint.
+Defina as variáveis de ambiente criando um novo arquivo .env nas pasta do módulo mobile. Este, conforme exemplo abaixo, deve possuir o ip local, para funcionamento do Reactotron e o endereço da API Gympoint.
 
+```
 #API_URL
 BASE_URL=192.168.1.12
 
 #BASE_URL
 API_URL=http://192.168.1.12:3333
-
+```
 
 ### Iniciando o App 
 
 Instale as dependências acessando a pasta GympointMobile e executando:
-
+```
 yarn
-
+```
 
 Com o dispositivo conectado via USB ou máquina virtual ativada, execute os comandos:
-
+```
 sudo react-native run-android
 
 sudo react-native start
-
+```
 
 
 
