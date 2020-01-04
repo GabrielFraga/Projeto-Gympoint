@@ -15,7 +15,6 @@ import { List, Item, Text, Created } from './styles';
 
 function CheckIns({ isFocused }) {
   const [checkins, setCheckins] = useState([]);
-  const [render, setRender] = useState([]);
   const [loading, setLoading] = useState([false]);
 
   const userId = useSelector(state => state.auth.id);
@@ -44,7 +43,7 @@ function CheckIns({ isFocused }) {
     }
   }
 
-  function Content() {
+  function CheckinsList() {
     if (loading) {
       return <ActivityIndicator color="#ee4e62" />;
     }
@@ -71,7 +70,7 @@ function CheckIns({ isFocused }) {
         onPress={handleSubmit}>
         Novo check-in
       </Button>
-      {checkins && <Content />}
+      {checkins && <CheckinsList />}
     </Background>
   );
 }
