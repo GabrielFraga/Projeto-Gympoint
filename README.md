@@ -21,7 +21,7 @@ APP_DEV_PORT=3333
 NODE_ENV=development 
 
 #Auth - Hash para criação da sessão do usuário. Pode ser gerado em https://www.md5online.org/.
-APP_SECRET=
+APP_SECRET=7fu3hr9gh3b3mkg
 
 #Admin_User - Usuário administrador padrão. É utilizado para acessar o módulo web.
 ADMIN_EMAIL=admin@gympooint.com
