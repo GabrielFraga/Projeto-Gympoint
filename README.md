@@ -8,7 +8,7 @@ O Gympoint é um sistema de gerenciamento de academia. Possui uma API que manté
 Para fins de compatibilidade e assertividade do guia abaixo, recomendo utilizar o yarn ao invés do npm. https://yarnpkg.com/en/docs/install
 
 
-##API Gympoint
+# API Gympoint
 
 Após baixar o projeto, deve ser criado um arquivo chamado ".env" na pasta gympointAPI contendo as variáveis de ambiente necessárias pra funcionamento do projeto. O conteúdo do arquivo deve ser conforme exemplificação abaixo. Utilize o arquivo ".env.example" como molde. 
 
