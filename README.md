@@ -2,15 +2,16 @@
 
 Projeto de conclusão do curso GoStack da RockeatSeat. 
 
-O Gympoint é um sistema de gerenciamento de academia. Possui uma API que mantém os dados, um módulo web para administração e cadastro de planos, alunos e pedidos de ajuda e um aplicativo para acesso dos alunos da academia onde podem ser feitos os check-ins e realização de pedidos de ajuda.
+O Gympoint é um sistema de gerenciamento de academia. Possui uma API que mantém os dados, um módulo web para administração, cadastro de planos, alunos e resposta aos pedidos de ajuda dos alunos; e um aplicativo para acesso dos alunos da academia onde podem ser feitos os check-ins e realização de pedidos de ajuda.
 
 
-Para fins de compatibilidade e assertividade do guia abaixo, recomendo utilizar o yarn ao invés do npm. https://yarnpkg.com/en/docs/install
+Para fins de compatibilidade e assertividade do guia abaixo, recomendo utilizar o yarn.
+https://yarnpkg.com/en/docs/install
 
 
 # API Gympoint
 
-Após baixar o projeto, deve ser criado um arquivo chamado ".env" na pasta gympointAPI contendo as variáveis de ambiente necessárias pra funcionamento do projeto. O conteúdo do arquivo deve ser conforme exemplificação abaixo. Utilize o arquivo ".env.example" como molde. 
+Após baixar o projeto, deve ser criado um arquivo chamado ".env" na pasta gympointAPI contendo as variáveis de ambiente necessárias pra funcionamento do projeto. O conteúdo do arquivo deve ser conforme exemplo abaixo:
 
 ### Variáveis de Ambiente da API
 
@@ -27,7 +28,6 @@ APP_SECRET=7fu3hr9gh3b3mkg
 ADMIN_EMAIL=admin@gympooint.com
 ADMIN_PASS=123456
 
-APP_SECRET= 
 #Database - Informações sobre o banco que será utilizado pelo projeto.
 DB_HOST=localhost
 DB_USER=admin
@@ -50,13 +50,13 @@ DSN=
 
 #### Iniciando o projeto
 
-Para rodar a API, instale as dependências do projeto, executando o comando:
+Para rodar a API, instale as dependências do projeto, abra o terminal nas pasta da API e execute o comando:
 
 ``` yarn ```
 
 Inicie seu banco local e o Redis. 
 
-Popule o banco rodando as migrations e os seeds. Para isso, na raiz da pasta gympointAPI abra seu terminal e execute os comandos:
+Popule o banco rodando as migrations e os seeds. Para isso, execute os comandos:
 
 ```
 yarn sequelize db:migrate
@@ -83,7 +83,7 @@ O módulo web é o acesso de administrador. A única variável de ambiente deste
 
 ### Variáveis de ambiente do módulo Web
 
-Na pasta gympointWeb, crie um arquivo .env e preencha conforme exemplo do arquivo .env.example. 
+Na pasta gympointWeb, crie um arquivo .env e preencha conforme exemplo abaixo: 
 
 ```
 #API - Porta em que a API está rodando.
@@ -103,14 +103,14 @@ Para acessar o sistema, utilize o login de administrador definido nas variáveis
 
 ## Aplicativo Gympoint
 
-Durante o desenvolvimento dessa aplicação utilizei apenas dispositivos Android, portanto, não posso garantir que o aplicativo funciona corretamente em dispositivos IOS. O guia abaixo é apenas para Android
+Durante o desenvolvimento dessa aplicação utilizei apenas dispositivos Android, portanto, não posso garantir que o aplicativo funcione corretamente em dispositivos IOS. O guia abaixo é apenas para Android
 
 Para rodar o app, é preciso ter o ambiente o Android instalado em sua máquina. Acesse o tutorial a seguir se necessário. https://docs.rocketseat.dev/ambiente-react-native/introducao
 
 
 ### Variáveis de ambiente do app
 
-Defina as variáveis de ambiente criando um novo arquivo .env nas pasta do módulo mobile. Este, conforme exemplo abaixo, deve possuir o ip local, para funcionamento do Reactotron e o endereço da API Gympoint.
+Defina as variáveis de ambiente criando um novo arquivo .env na pasta do módulo mobile. Este, conforme exemplo abaixo, deve possuir o ip local, para funcionamento do Reactotron e o endereço da API Gympoint, conforme exemplo abaixo:
 
 ```
 #API_URL
