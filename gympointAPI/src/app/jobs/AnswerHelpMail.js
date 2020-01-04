@@ -8,7 +8,7 @@ class AnswerHelpMail {
   async handle({ data }) {
     const { student, helpOrder } = data;
     await Mail.sendMail({
-      to: `${student.name} <${student.mail}>`,
+      to: `${student.name} <${student.email}>`,
       subject: 'Resposta ao seu pedido de auxílio',
       template: 'answer',
       context: {
