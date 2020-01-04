@@ -41,10 +41,6 @@ export default function UpdateRegistration() {
   const [students, setStudents] = useState([]);
 
   useEffect(() => {
-    console.tron.log(registration);
-  }, [registration]);
-
-  useEffect(() => {
     (async () => {
       const { data } = await api.get('/registrations', {
         params: {
