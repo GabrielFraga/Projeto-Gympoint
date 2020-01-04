@@ -2,10 +2,11 @@
 
 Projeto de conclusão do curso GoStack da RockeatSeat. 
 
-O Gympoint é um sistema de gerenciamento de academia. Possui uma API que mantém os dados, um módulo web para administração e cadastro de planos, alunos e pedidos de ajuda e um aplicativo para acesso dos alunos da academia onde podem ser feitos os check-ins e realização de pedidos de ajuda.
+O Gympoint é um sistema de gerenciamento de academia. Possui uma API que mantém os dados, um módulo web para administração, cadastro de planos, alunos e resposta aos pedidos de ajuda dos alunos; e um aplicativo para acesso dos alunos da academia onde podem ser feitos os check-ins e realização de pedidos de ajuda.
 
 
-Para fins de compatibilidade e assertividade do guia abaixo, recomendo utilizar o yarn ao invés do npm. https://yarnpkg.com/en/docs/install
+Para fins de compatibilidade e assertividade do guia abaixo, recomendo utilizar o yarn.
+https://yarnpkg.com/en/docs/install
 
 
 # API Gympoint
@@ -49,13 +50,13 @@ DSN=
 
 #### Iniciando o projeto
 
-Para rodar a API, instale as dependências do projeto, executando o comando:
+Para rodar a API, instale as dependências do projeto, abra o terminal nas pasta da API e execute o comando:
 
 ``` yarn ```
 
 Inicie seu banco local e o Redis. 
 
-Popule o banco rodando as migrations e os seeds. Para isso, na raiz da pasta gympointAPI abra seu terminal e execute os comandos:
+Popule o banco rodando as migrations e os seeds. Para isso, execute os comandos:
 
 ```
 yarn sequelize db:migrate
@@ -102,7 +103,7 @@ Para acessar o sistema, utilize o login de administrador definido nas variáveis
 
 ## Aplicativo Gympoint
 
-Durante o desenvolvimento dessa aplicação utilizei apenas dispositivos Android, portanto, não posso garantir que o aplicativo funciona corretamente em dispositivos IOS. O guia abaixo é apenas para Android
+Durante o desenvolvimento dessa aplicação utilizei apenas dispositivos Android, portanto, não posso garantir que o aplicativo funcione corretamente em dispositivos IOS. O guia abaixo é apenas para Android
 
 Para rodar o app, é preciso ter o ambiente o Android instalado em sua máquina. Acesse o tutorial a seguir se necessário. https://docs.rocketseat.dev/ambiente-react-native/introducao
 
