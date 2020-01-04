@@ -10,7 +10,7 @@ Para fins de compatibilidade e assertividade do guia abaixo, recomendo utilizar 
 
 # API Gympoint
 
-Após baixar o projeto, deve ser criado um arquivo chamado ".env" na pasta gympointAPI contendo as variáveis de ambiente necessárias pra funcionamento do projeto. O conteúdo do arquivo deve ser conforme exemplificação abaixo. Utilize o arquivo ".env.example" como molde. 
+Após baixar o projeto, deve ser criado um arquivo chamado ".env" na pasta gympointAPI contendo as variáveis de ambiente necessárias pra funcionamento do projeto. O conteúdo do arquivo deve ser conforme exemplo abaixo:
 
 ### Variáveis de Ambiente da API
 
@@ -27,7 +27,6 @@ APP_SECRET=7fu3hr9gh3b3mkg
 ADMIN_EMAIL=admin@gympooint.com
 ADMIN_PASS=123456
 
-APP_SECRET= 
 #Database - Informações sobre o banco que será utilizado pelo projeto.
 DB_HOST=localhost
 DB_USER=admin
@@ -83,7 +82,7 @@ O módulo web é o acesso de administrador. A única variável de ambiente deste
 
 ### Variáveis de ambiente do módulo Web
 
-Na pasta gympointWeb, crie um arquivo .env e preencha conforme exemplo do arquivo .env.example. 
+Na pasta gympointWeb, crie um arquivo .env e preencha conforme exemplo abaixo: 
 
 ```
 #API - Porta em que a API está rodando.
@@ -110,7 +109,7 @@ Para rodar o app, é preciso ter o ambiente o Android instalado em sua máquina.
 
 ### Variáveis de ambiente do app
 
-Defina as variáveis de ambiente criando um novo arquivo .env nas pasta do módulo mobile. Este, conforme exemplo abaixo, deve possuir o ip local, para funcionamento do Reactotron e o endereço da API Gympoint.
+Defina as variáveis de ambiente criando um novo arquivo .env na pasta do módulo mobile. Este, conforme exemplo abaixo, deve possuir o ip local, para funcionamento do Reactotron e o endereço da API Gympoint, conforme exemplo abaixo:
 
 ```
 #API_URL
