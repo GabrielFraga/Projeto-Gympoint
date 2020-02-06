@@ -77,6 +77,9 @@ yarn queue
 ```
 
 ## Módulo Web.
+<img src="https://raw.githubusercontent.com/wiki/GabrielFraga/Projeto-Gympoint/images/web-gerenciamento-alunos.png" />
+<img src="https://raw.githubusercontent.com/wiki/GabrielFraga/Projeto-Gympoint/images/web-gerenciamento-matriculas.png" />
+
 
 O módulo web é o acesso de administrador. A única variável de ambiente deste módulo é o caminho até a API, iniciada no passo anterior. 
 
@@ -102,6 +105,11 @@ Para acessar o sistema, utilize o login de administrador definido nas variáveis
 
 
 ## Aplicativo Gympoint
+<div>
+<img src="https://raw.githubusercontent.com/wiki/GabrielFraga/Projeto-Gympoint/images/app-checkins-inicial.jpg" width="250px"  />
+
+<img src="https://raw.githubusercontent.com/wiki/GabrielFraga/Projeto-Gympoint/images/app-detalhe-auxilio-respondido.jpg" width="250px" />
+</div>
 
 Durante o desenvolvimento dessa aplicação utilizei apenas dispositivos Android, portanto, não posso garantir que o aplicativo funcione corretamente em dispositivos IOS. O guia abaixo é apenas para Android
 
