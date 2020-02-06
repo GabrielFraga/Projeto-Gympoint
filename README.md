@@ -106,9 +106,14 @@ Para acessar o sistema, utilize o login de administrador definido nas variáveis
 
 ## Aplicativo Gympoint
 <div>
-<img src="https://raw.githubusercontent.com/wiki/GabrielFraga/Projeto-Gympoint/images/app-checkins-inicial.jpg" width="250px"  />
+<img src="https://raw.githubusercontent.com/wiki/GabrielFraga/Projeto-Gympoint/images/app-checkins-inicial.jpg" width="200px"  />
+  <img src="https://raw.githubusercontent.com/wiki/GabrielFraga/Projeto-Gympoint/images/app-checkin-realizado.jpg" width="200px" />
+</div>
 
-<img src="https://raw.githubusercontent.com/wiki/GabrielFraga/Projeto-Gympoint/images/app-detalhe-auxilio-respondido.jpg" width="250px" />
+<div>
+<img src="https://raw.githubusercontent.com/wiki/GabrielFraga/Projeto-Gympoint/images/app-auxilio-respondido.jpg" width="200px" />
+
+<img src="https://raw.githubusercontent.com/wiki/GabrielFraga/Projeto-Gympoint/images/app-detalhe-auxilio-respondido.jpg" width="200px" />
 </div>
 
 Durante o desenvolvimento dessa aplicação utilizei apenas dispositivos Android, portanto, não posso garantir que o aplicativo funcione corretamente em dispositivos IOS. O guia abaixo é apenas para Android
